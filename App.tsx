@@ -109,9 +109,8 @@ export default function App() {
         return;
       }
     }
-    // Auth state listener will populate user; navigate to profile
-    setLoginOpen(false);
-    setCurrentPage('Profile');
+  // Auth state listener will populate user; keep current page (do not redirect)
+  setLoginOpen(false);
   };
 
   const handleLogout = async () => {

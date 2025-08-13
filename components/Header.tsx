@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ setPage, setSelectedCourse, curr
   
   let navLinks: Page[] = ['Home', 'Programs', 'Internships', 'About Us'];
   if (user) {
-    navLinks = ['Home', 'Programs', 'Internships', 'Profile'];
+    navLinks = ['Home', 'Programs', 'Internships', 'About Us', 'Profile'];
   }
 
   const handleNavigate = (page: Page) => {

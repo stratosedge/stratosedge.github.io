@@ -4,23 +4,23 @@ import { motion } from 'framer-motion';
 import { Briefcase, Award, Code, Megaphone, TrendingUp, Target, CheckCircle } from 'lucide-react';
 
 const solutions = [
-    { icon: <Briefcase/>, title: "Enterprise Training", desc: "Future-ready programs on innovation, culture transformation, DEI, and managerial capability building." },
-    { icon: <Award/>, title: "Campus Readiness", desc: "Career mapping, behavioral interviews, resume diagnostics, and simulated assessments for job readiness." },
-    { icon: <Code/>, title: "Tech Excellence", desc: "Learning paths in Gen AI, full-stack, cyber-security, cloud, and data science for upskilling tech teams." },
-    { icon: <Megaphone/>, title: "Communication Mastery", desc: "Programs in assertive communication, client handling, storytelling, and business presentations." },
-    { icon: <TrendingUp/>, title: "Leadership Acceleration", desc: "Executive coaching, leadership labs, agile frameworks, and strategic thinking simulations." },
-    { icon: <Target/>, title: "Tailored Learning", desc: "Custom-built solutions to match domain maturity, team goals, and organizational culture." },
+  { icon: <Briefcase/>, title: "Enterprise Training", desc: "Future-ready programs on innovation, culture transformation, DEI, and managerial capability building." },
+  { icon: <Award/>, title: "Campus Readiness", desc: "Career mapping, behavioral interviews, resume diagnostics, and simulated assessments for job readiness." },
+  { icon: <Code/>, title: "Tech Excellence", desc: "Learning paths in Gen AI, full-stack, cyber-security, cloud, and data science for upskilling tech teams." },
+  { icon: <Megaphone/>, title: "Communication Mastery", desc: "Programs in assertive communication, client handling, storytelling, and business presentations." },
+  { icon: <TrendingUp/>, title: "Leadership Acceleration", desc: "Executive coaching, leadership labs, agile frameworks, and strategic thinking simulations." },
+  { icon: <Target/>, title: "Tailored Learning", desc: "Custom-built solutions to match domain maturity, team goals, and organizational culture." },
 ];
 
 const expertiseItems = [
-    "Strategic Decision-Making, Executive Presence, Business Storytelling",
-    "Career Acceleration, Agile Learning, Talent Development",
-    "Emotional Intelligence, Human Error Prevention, DEI Training",
-    "Sales Enablement, Negotiation Mastery, Customer-Centric Selling",
-    "Crisis Communication, Risk Mitigation, Change Management",
-    "Productivity Enhancement, Stress & Time Management",
-    "AI-Driven Learning, Digital Transformation in Training",
-    "Industry-Specific Adaptability: IT, BFSI, Telecom, Manufacturing",
+  "Strategic Decision-Making, Executive Presence, Business Storytelling",
+  "Career Acceleration, Agile Learning, Talent Development",
+  "Emotional Intelligence, Human Error Prevention, DEI Training",
+  "Sales Enablement, Negotiation Mastery, Customer-Centric Selling",
+  "Crisis Communication, Risk Mitigation, Change Management",
+  "Productivity Enhancement, Stress & Time Management",
+  "AI-Driven Learning, Digital Transformation in Training",
+  "Industry-Specific Adaptability: IT, BFSI, Telecom, Manufacturing",
 ];
 
 export const AboutUsPage: React.FC = () => {
