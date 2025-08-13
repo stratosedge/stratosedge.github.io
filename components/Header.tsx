@@ -31,21 +31,22 @@ export const Header: React.FC<HeaderProps> = ({ setPage, setSelectedCourse, curr
   return (
     <header className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28 md:h-32">
+  <div className="flex items-center justify-between py-2 md:py-3">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-            <button onClick={() => handleNavigate('Home')} className="flex items-center focus:outline-none">
-              <img src={Logo} alt="StratosEdge" className="h-24 md:h-28 lg:h-32 w-auto object-contain" />
-              <span className="sr-only">StratosEdge</span>
+            {/* Logo image (kept for future). To restore the image logo, uncomment the line below and adjust colors to match the background: */}
+            {/** <img src={Logo} alt="StratosEdge" className="h-20 md:h-24 lg:h-24 w-auto object-contain" /> **/}
+            <button onClick={() => handleNavigate('Home')} className="text-2xl font-bold leading-none text-white focus:outline-none">
+              Stratos<span className="text-indigo-400">Edge</span>
             </button>
           </motion.div>
 
           <div className="hidden md:flex items-center">
-            <nav className="ml-10 flex items-baseline space-x-4">
+    <nav className="ml-10 flex items-baseline space-x-4">
               {navLinks.map(link => (
                 <button
                   key={link}
                   onClick={() => handleNavigate(link)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${currentPage === link ? 'bg-indigo-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+      className={`px-3 py-1.5 md:py-2 rounded-md text-sm font-medium transition-colors duration-300 ${currentPage === link ? 'bg-indigo-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                 >
                   {link}
                 </button>
