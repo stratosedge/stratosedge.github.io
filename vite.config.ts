@@ -7,10 +7,7 @@ export default defineConfig(({ mode }) => {
   // Hardcode base for GitHub Pages repo: akhilsaisammeta.github.io/stratos-edge/
   // Dev server ignores this; it only affects build output.
   base: '/stratos-edge/',
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
+  // No unused API key defines
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
