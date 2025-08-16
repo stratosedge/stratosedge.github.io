@@ -7,6 +7,7 @@ import { ProgramsPage } from './pages/ProgramsPage';
 import { InternshipsPage } from './pages/InternshipsPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { ProfilePage } from './pages/ProfilePage';
+import { CollaboratePage } from './pages/CollaboratePage';
 import { CourseDetailPage } from './pages/CourseDetailPage';
 import { LoginModal } from './components/modals/LoginModal';
 import { ApplicationModal } from './components/modals/ApplicationModal';
@@ -189,6 +190,7 @@ export default function App() {
       case 'Home': return <HomePage setPage={setCurrentPage} onExplore={handleSetSelectedCourse} />;
       case 'Programs': return <ProgramsPage onExplore={handleSetSelectedCourse} />;
       case 'Internships': return <InternshipsPage onExplore={handleSetSelectedCourse} />;
+  case 'Collaborate': return <CollaboratePage user={user} onLoginClick={() => setLoginOpen(true)} />;
       case 'About Us': return <AboutUsPage />;
       case 'Profile':
         if (user) {

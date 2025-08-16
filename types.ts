@@ -30,7 +30,7 @@ export interface User {
   appliedCourses: number[];
 }
 
-export type Page = 'Home' | 'Programs' | 'Internships' | 'About Us' | 'Profile';
+export type Page = 'Home' | 'Programs' | 'Internships' | 'Collaborate' | 'About Us' | 'Profile';
 
 export interface Testimonial {
   id: number;

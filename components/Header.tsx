@@ -17,9 +17,9 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ setPage, setSelectedCourse, currentPage, user, onLoginClick, onLogout }) => {
   const [isOpen, setIsOpen] = useState(false);
   
-  let navLinks: Page[] = ['Home', 'Programs', 'Internships', 'About Us'];
+  let navLinks: Page[] = ['Home', 'Programs', 'Internships', 'Collaborate', 'About Us'];
   if (user) {
-    navLinks = ['Home', 'Programs', 'Internships', 'About Us', 'Profile'];
+    navLinks = ['Home', 'Programs', 'Internships', 'Collaborate', 'About Us', 'Profile'];
   }
 
   const handleNavigate = (page: Page) => {

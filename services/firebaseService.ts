@@ -20,6 +20,7 @@ const db = getFirestore(app);
 
 const applicationsCollection = collection(db, 'applications');
 const usersCollection = collection(db, 'users');
+const contactSubmissionsCollection = collection(db, 'contactSubmissions');
 
 export const submitApplication = async (user: User, course: Course): Promise<void> => {
   try {
@@ -77,4 +78,26 @@ export const fetchAppliedCourseIdsByEmail = async (email: string): Promise<numbe
     if (typeof data.courseId === 'number') ids.add(data.courseId);
   });
   return Array.from(ids);
+};
+
+// Contact submissions
+export interface ContactSubmission {
+  orgName: string;
+  contact: string; // email/phone or brief note
+  userEmail?: string;
+  createdAt?: any;
+}
+
+export const submitContact = async (payload: ContactSubmission): Promise<void> => {
+  try {
+    await addDoc(contactSubmissionsCollection, {
+      orgName: payload.orgName,
+      contact: payload.contact,
+      userEmail: payload.userEmail || null,
+      createdAt: serverTimestamp(),
+    });
+  } catch (e) {
+    console.error('Failed to submit contact request', e);
+    throw new Error('Could not submit contact request. Please try again.');
+  }
 };
