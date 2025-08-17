@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=./index.html">
+    <link rel="canonical" href="./index.html">
+  </head>
+  <body>
+    <p>Redirecting to <a href="./index.html">the app</a>…</p>
+    <script>
+      // Improve SPA redirect preserving path for client-side router if needed
+      (function() {
+        var l = window.location;
+        if (l.pathname !== '/' && !l.pathname.endsWith('/index.html')) {
+          // For Vite base paths on Pages, compute relative path to index
+          var base = (document.querySelector('link[rel=canonical]')||{}).href || './index.html';
+          window.location.replace(base);
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     return {
   // Hardcode base for GitHub Pages repo: akhilsaisammeta.github.io/stratos-edge/
   // Dev server ignores this; it only affects build output.
-  base: '/stratosedge/',
+  base: '/stratos-edge/',
   // No unused API key defines
       resolve: {
         alias: {
