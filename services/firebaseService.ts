@@ -3,14 +3,14 @@ import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWith
 import { getFirestore, collection, addDoc, serverTimestamp, doc, getDoc, setDoc, updateDoc, query, where, getDocs } from 'firebase/firestore';
 import { User, Course } from '../types';
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration (production)
 const firebaseConfig = {
-  apiKey: "AIzaSyD94DP3MkWQ5u4Onp_fCaK1aUu4Mdyfulw",
-  authDomain: "stratos-edge.firebaseapp.com",
-  projectId: "stratos-edge",
-  storageBucket: "stratos-edge.appspot.com",
-  messagingSenderId: "896849839174",
-  appId: "1:896849839174:web:f14f6379f082afc050f647"
+  apiKey: "AIzaSyBuY4ZtEg_6g6Wi_QlK2CzhJrRfqYCpDzQ",
+  authDomain: "stratos-edge-learning.firebaseapp.com",
+  projectId: "stratos-edge-learning",
+  storageBucket: "stratos-edge-learning.firebasestorage.app",
+  messagingSenderId: "673017384948",
+  appId: "1:673017384948:web:bbc8b7dfb382f11ff5f3a1"
 };
 
 // Initialize Firebase
